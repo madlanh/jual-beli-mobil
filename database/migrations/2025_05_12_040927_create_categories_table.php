@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id(); // Kolom ID unik untuk setiap kategori
-            $table->string('name'); // Nama kategori, tipe data string
-            $table->text('description')->nullable(); // Deskripsi kategori, opsional, tipe data text
-            $table->timestamps(); // Kolom untuk mencatat waktu pembuatan dan perubahan data
+            $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->timestamps();
         });
     }
 

@@ -9,14 +9,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('transactions', function (Blueprint $table) {
-            // Hapus foreign key constraint sementara
             $table->dropForeign(['product_id']);
             
-            // Ubah nama kolom dan tipe data
             $table->renameColumn('total_price', 'quantity');
             $table->unsignedInteger('quantity')->change();
             
-            // Kembalikan foreign key
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }

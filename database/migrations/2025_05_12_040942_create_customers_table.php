@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->id(); // Kolom ID unik untuk setiap customer
-            $table->string('name'); // Nama customer, tipe data string
-            $table->string('email')->unique(); // Email customer, tipe data string, harus unik
-            $table->string('phone'); // Nomor telepon customer, tipe data string
-            $table->text('address'); // Alamat customer, tipe data text
-            $table->timestamps(); // Kolom untuk mencatat waktu pembuatan dan perubahan data
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('phone');
+            $table->text('address');
+            $table->timestamps();
         });
     }
 

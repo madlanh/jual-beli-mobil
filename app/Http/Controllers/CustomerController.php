@@ -31,7 +31,7 @@ class CustomerController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:customers,email',
-            'phone' => 'required|string|max:15',
+            'phone' => 'required|string|max:15|min:5',
             'address' => 'required|string',
         ]);
 
@@ -59,7 +59,7 @@ class CustomerController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:customers,email,' . $id,
-            'phone' => 'required|string|max:15',
+            'phone' => 'required|string|max:15|min:5',
             'address' => 'required|string',
         ]);
 

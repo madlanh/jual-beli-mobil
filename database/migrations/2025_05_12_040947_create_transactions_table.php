@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('product_id');
-            $table->unsignedInteger('quantity'); // Diubah dari decimal ke integer
+            $table->unsignedInteger('quantity');
             $table->date('transaction_date');
             $table->timestamps();
 
